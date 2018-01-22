@@ -4,6 +4,13 @@ namespace Netcore\GAlerts;
 
 class GAlert extends GAlertBase
 {
+    public $email;
+    public $password;
+
+    public function __construct($email, $password) {
+        $this->email = $email;
+        $this->$password = $password;
+    }
 
     /**
      * Get all alerts
@@ -176,7 +183,7 @@ class GAlert extends GAlertBase
 
     /**
      * Create the alert
-     * 
+     *
      * @return mixed
      */
     public function save()

@@ -75,8 +75,8 @@ class ManagerBase
         $loginForm = FormUtils::getFormFields($loginBody);
 
         // Modify auth data
-        $loginForm['Email'] = config('galerts.user');
-        $loginForm['Passwd'] = config('galerts.pass');
+        $loginForm['Email'] = GAlert::email;
+        $loginForm['Passwd'] = GAlert::password;
 
         unset($loginForm['PersistentCookie']);
 
